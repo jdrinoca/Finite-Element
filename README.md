@@ -33,7 +33,6 @@ sample text
 
 sample text
 
-
 ---
 
 ### How to Download
@@ -83,25 +82,7 @@ sample text
 ---
 
 ### Why?
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
-
-sample text
+Good question.  I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten pythoni working on my desktop.
 
 ---
 
