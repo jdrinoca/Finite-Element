@@ -8,38 +8,38 @@ Uploaded on 8/24/2020
 ---
 
 ### Table of Contents
-1. [Introduction](#section-1)
-2. [How to Download](#section-2)
-3. [User's Guide](#section-3)
-4. [Why?](#section-4)
-5. [What's Next?](#section-5)
-6. [Final Thoughts](#section-6)
+1. [Introduction](#Introduction)
+2. [How to Download](#how-to-download)
+3. [User's Guide](#users-guide)
+4. [Why?](#why)
+5. [What's Next?](#whats-next)
+6. [Final Thoughts](#final-thoughts)
 
 ---
 
-### Introduction {#section-1}
-
-
----
-
-### How to Download {#section-2}
+### Introduction
 
 
 ---
 
-### User's Guide {#section-3}
+### How to Download
 
 
 ---
 
-### Why? {#section-4}
+### User's Guide
+
+
+---
+
+### Why?
 Good question.
 
 I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten Python working on my desktop, so I decided to combine the two and test my ability to ~~google~~ program.  The script was only intended to be text-based and contained to a single Python file, but I was playing around with the Matplotlib animation function and the project grew from there.
 
 ---
 
-### What's Next? {#section-5}
+### What's Next?
 This is still a work-in-progress.
 
 One (major) part that needs updating is the stress calculations for each element.  The stress values are dependant on their order of creation, and a lot of the time do not reflect the actual stresses in the element.  The nodal displacements, however, seem to be correct.
@@ -52,5 +52,5 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 
 ---
 
-### Final Thoughts {#section-6}
+### Final Thoughts
 Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more preformance than me but if they wer smart, they'd probably use something different in the first place.
