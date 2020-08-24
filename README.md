@@ -42,16 +42,15 @@ This is still a work-in-progress.
 
 One (major) part that needs updating is the stress calculations for each element.  The stress values are dependant the order of creation, and a lot of the time do not reflect the actual stresses in the element.  The nodal displacements, however, are correct.
 
-I also need to go through each file and finish commenting.  I was pretty good about doing that as I went, but some files (solver, for instance) had so many iterations that I decided to do that when I finalized that file (as if).
+Another big feature that I'm missing is a way to save simulation results.  Right now, the only way to analyze the structure is to look at their colors and compare them to the colormap on the right to estimate stress/displacement.  This sucks.  Ideally, I'd like to save the results as a .pdf that would include a screenshot of the full structure (deformed and undeformed) with node and element numbers displayed above each object, and a chart of nodes/element numbers and ther respective displacement/stress.  Once I get the stress calculations dialed in, this is my next step.
 
-Current files that need commenting are:
-  * file1
-  * file2
-  * file3
+I also need to go through each file and finish commenting.  I was pretty good about doing that as I went, but some files (solver, for instance) had so many iterations that I decided to do that when I finished messing with that file (ad infinitum).
 
 This program runs okay(ish).  The more nodes/elements/forces etc. the worse it runs, and this drops off *quickly*.  I dove a little into possibly multi-threading the animation loop since casuses the most noticeable frame issues, but I wasn't able to swing it in the end.  I wanted to get this thing onto Github by the end of August, and I was running out of time (It's 8/23/2020 as I type this).  Multi-threading and other types of code optimization are on my radar but don't hold your breath.
 
 ---
 
 ### Final Thoughts
+PEP 8
 
+About a month ago, I was made aware of PEP 8 standards for Python.  
