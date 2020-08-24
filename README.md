@@ -2,6 +2,8 @@
 NOT FINISHED
 
 A 2-D finite element solver and interface.
+By Joseph Rudick
+Date Uploaded: 8/24/2020
 
 ---
 
