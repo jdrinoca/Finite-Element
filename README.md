@@ -1,6 +1,4 @@
 # Finite-Element
-NOT FINISHED
-
 A 2-D finite element solver and interface.
 
 By Joseph Rudick
@@ -10,38 +8,38 @@ Uploaded on 8/24/2020
 ---
 
 ### Table of Contents
-1. [Introduction](#Introduction)
-2. [How to Download](#How-to-Download)
-3. [User's Guide](#Users-Guide)
-4. [Why?](#Why)
-5. [What's Next?](#Whats-Next)
-6. [Final Thoughts](#Final-Thoughts)
+1. [Introduction](#section-1)
+2. [How to Download](#section-2)
+3. [User's Guide](#section-3)
+4. [Why?](#section-4)
+5. [What's Next?](#section-5)
+6. [Final Thoughts](#section-6)
 
 ---
 
-### Introduction
-
-
----
-
-### How to Download
+### Introduction {#section-1}
 
 
 ---
 
-### User's Guide
+### How to Download {#section-2}
 
 
 ---
 
-### Why?
+### User's Guide {#section-3}
+
+
+---
+
+### Why? {#section-4}
 Good question.
 
 I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten Python working on my desktop, so I decided to combine the two and test my ability to ~~google~~ program.  The script was only intended to be text-based and contained to a single Python file, but I was playing around with the Matplotlib animation function and the project grew from there.
 
 ---
 
-### What's Next?
+### What's Next? {#section-5}
 This is still a work-in-progress.
 
 One (major) part that needs updating is the stress calculations for each element.  The stress values are dependant on their order of creation, and a lot of the time do not reflect the actual stresses in the element.  The nodal displacements, however, seem to be correct.
@@ -54,5 +52,5 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 
 ---
 
-### Final Thoughts
+### Final Thoughts {#section-6}
 Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more preformance than me but if they wer smart, they'd probably use something different in the first place.
