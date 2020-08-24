@@ -1,4 +1,6 @@
 # Finite-Element
+NOT FINISHED
+
 A 2-D finite element solver and interface.
 
 ---
@@ -49,4 +51,4 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 ---
 
 ### Final Thoughts
-Why GOD did I use Matplotlib as my animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more preformance than me but if they wer smart, they'd probably use something different in the first place.
+Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more preformance than me but if they wer smart, they'd probably use something different in the first place.
