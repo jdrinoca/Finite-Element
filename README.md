@@ -82,7 +82,9 @@ sample text
 ---
 
 ### Why?
-Good question.  I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten pythoni working on my desktop.
+Good question.
+
+I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten python working on my desktop.  I had originally inteded to create a text-based solver to help with some homework problems, but I was playing around with matplotlib, and the project crew from there.
 
 ---
 
