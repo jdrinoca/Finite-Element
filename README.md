@@ -8,7 +8,7 @@ A 2-D finite element solver and interface.
 2. [How to Download](#How-to-Download)
 3. [User's Guide](#Users-Guide)
 4. [Why?](#Why)
-5. [What's Next?] (#What's-Next?)
+5. [What's Next?](#Whats-Next)
 6. [Final Thoughts](#Final-Thoughts)
 
 ---
