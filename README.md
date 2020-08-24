@@ -38,7 +38,7 @@ I was taking a course in the [finite element method](https://en.wikipedia.org/wi
 ---
 
 ### What's Next?
-
+This is still a work-in-progress.  One (major) part that's missing is the stress calculations for each element.  
 
 ---
 
