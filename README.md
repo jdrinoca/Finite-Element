@@ -3,9 +3,9 @@ NOT FINISHED
 
 A 2-D finite element solver and interface.
 
-By: Joseph Rudick
+By Joseph Rudick
 
-Date Uploaded: 8/24/2020
+Uploaded on 8/24/2020
 
 ---
 
