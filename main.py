@@ -4,7 +4,6 @@ import nodeUI, elementUI, constraintUI, loadUI
 import solver, saver, importer, reset, slider
 import events
 
-from joblib import Parallel, delayed, parallel_backend
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
