@@ -18,7 +18,9 @@ Uploaded on 8/24/2020
 ---
 
 ### Introduction
-Welcome!  
+Welcome!
+
+This is a repository for a program that I developed as a summer project for 2020.  The program is a 2-D finite element solver written entirely in Python.  Think West Point Bridge Designer, but more versatile and less polished.  It employs the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) to calculate the stress and strain for a user-created 2-dimensional structure.  The program was designed for quick engineering analysis where the structure can be approximated as a frame.
 
 ---
 
@@ -35,7 +37,7 @@ Welcome!
 ### Why?
 Good question.
 
-I was taking a course in the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) right around the same time that I had finally gotten Python working on my desktop, so I decided to combine the two and test my ability to ~~google~~ program.  The script was only intended to be text-based and contained to a single Python file, but I was playing around with the Matplotlib animation function and the project grew from there.
+I was taking a course in the finite element method right around the same time that I had finally gotten Python working on my desktop, so I decided to combine the two and test my ability to ~~google~~ program.  The script was only intended to be text-based and contained to a single Python file, but I was playing around with the Matplotlib animation function and the project grew from there.
 
 ---
 
