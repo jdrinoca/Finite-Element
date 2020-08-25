@@ -11,11 +11,6 @@ Uploaded on 8/24/2020
 1. [Introduction](#Introduction)
 2. [Download and Install](#download-and-install)
 3. [User's Guide](#users-guide)
-  - [Background](#background)
-  - [Navigation](#navigation)
-  - [Creating a Structure](#creating-a-structure)
-  - [Solving](#Solving)
-  - [Saving and Loading](#saving-and-loading)
 4. [Why?](#why)
 5. [What's Next?](#whats-next)
 6. [Final Thoughts](#final-thoughts)
@@ -46,19 +41,19 @@ If you choose to run through the source code, the following packages are require
 ---
 
 ### User's Guide
-##### Background
+#### Background
 text
 
-##### Navigation
+#### Navigation
 text
 
-##### Creating a Structure
+#### Creating a Structure
 text
 
-##### Solving
+#### Solving
 text
 
-##### Saving and Loading
+#### Saving and Loading
 text
 
 ---
