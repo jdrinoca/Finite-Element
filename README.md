@@ -20,7 +20,7 @@ Uploaded on 8/24/2020
 ### Introduction
 Welcome!
 
-This is a repository for a program that I developed as a summer project for 2020.  The program is a 2-D finite element solver written entirely in Python 3.  Think West Point Bridge Designer, but more versatile and less polished.  It employs the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) to calculate the stress and strain for a user-created 2-dimensional structure.  The program was designed for quick engineering analysis where the structure can be approximated as a frame.
+This is the repository for a program that I developed as a summer project for 2020.  The program is a 2-D finite element solver written entirely in Python 3.  Think West Point Bridge Designer, but more versatile and less polished.  It employs the [finite element method](https://en.wikipedia.org/wiki/Finite_element_method) to calculate the stress and strain for a user-created 2-dimensional structure.  The program was designed for quick engineering analysis where the structure can be approximated as a frame.
 
 ---
 
