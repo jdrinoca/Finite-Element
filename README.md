@@ -42,7 +42,11 @@ If you choose to run through the source code, the following packages are require
 
 ### User's Guide
 #### Background
-text
+This program solves for displacement and stress of frame members using equations found chapters 3 and 5 of "A First Course in the Finite Element Method" by Daryl L. Logan.
+
+The displacement calculations account for plane strain in the elements, and require the element materials [modulus of elasticity](https://en.wikipedia.org/wiki/Elastic_modulus) (E) as well as cross sectional area (A) of the element, and it's [area moment of inertia](https://en.wikipedia.org/wiki/List_of_second_moments_of_area) (I).
+
+Stress calculations *do not* account for plane stress, and simply rely on [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's_law).
 
 #### Navigation
 text
