@@ -27,7 +27,7 @@ This is the repository for a program that I developed as a summer project for 20
 ### Download and Install
 To view the source code, just open the file in Github.  If you'd like to download the repository, visit the main repository page and click the green "Code" button above the list of files.  This gives the option to download the master branch as a ZIP.  Once that gets downloaded and unpacked, you now have access to the source code, as well as an executable of the latest version.
 
-To launch the executable, navigate to where the directory was unpacked, and go to the "dist" folder.  From there, click on finite-element and scroll to or search for the file names "stretchy.exe".  This is the executable that allows the program to run without access to python or the required packages.  Double-click to launch (this may take a while) and have fun!
+To launch the executable, navigate to where the directory was unpacked, and go to the "dist" folder.  From there, click on finite-element and scroll to or search for the file names "stretchy.exe".  This is the executable that allows the program to run without access to Python or the required packages.  Double-click to launch (this may take a while) and have fun!
 
 NOTE:  If you're running either a macOS or a Linux distro, chances are the .exe won't work.  In that case, you have to run from the source code.  Make sure that all the .py files are in the same directory, and run main.py to start.
 
@@ -42,22 +42,26 @@ If you choose to run through the source code, the following packages are require
 
 ### User's Guide
 #### Background
-This program solves for displacement and stress of frame members using equations found chapters 3 and 5 of "A First Course in the Finite Element Method" by Daryl L. Logan.
+This program solves for the displacement and stress of frame elements using equations found in chapters 3 and 5 of "A First Course in the Finite Element Method" by Daryl L. Logan.
 
 The displacement calculations account for plane strain in the elements, and require the element materials [modulus of elasticity](https://en.wikipedia.org/wiki/Elastic_modulus) (E) as well as cross sectional area (A) of the element, and it's [area moment of inertia](https://en.wikipedia.org/wiki/List_of_second_moments_of_area) (I).
 
 Stress calculations *do not* account for plane stress, and simply rely on [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's_law).
 
 #### Navigation
-text
+All of the navigation is done through the mouse.  Scrolling the mouse wheel will zoom in and out, and holding and dragging middle-mouse will pan the display to where you want.
 
 #### Creating a Structure
 text
 
 #### Solving
-text
+With a completed structure, you're free to solve.  Click the "Solve" button in the top left, and you'll see a few things change.  First, the original structure is translucent, and a new deformed structure is visible.  Nodes are now colormapped to their absolute displacement, and elements are colormapped to their stress values.  The colormap is visible to the right, and provides some context values for the colormapping.  In both cases, red indicates the maximum value pink the minimum.
 
-#### Saving and Loading
+In a lot of cases, the displacement is imperceptible relative to the size of the structure.  For this reason, I have included a "Gain" slider in the bottom right, above the "Reset Solution" button.  In solved mode, the Gain slider can be moved to multiply the displacement of each node.  This allows for better qualitative analysis.  The slider maxes out at 10,000x.
+
+To exit solved mode and return to the structure editor, simply click the "Reset Solution" button in the bottom right.
+
+#### Saving and Importing
 text
 
 ---
@@ -85,11 +89,6 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 ### Final Thoughts
 Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more performance than me.  If they were smart, they'd probably use something different in the first place.  Pygame, for instance, would have been a better choice.  Even skipping over Python entirely and going straight to something like Unity would have helped.  That way, I could even do something in 3-D.  Oh well, live and learn.  At least now I'm *really* familiar with the Matplotlib documentation.
 
-The entire goal of this project was to learn by throwing myself off the deep end, and I believe I did just that.  In my opinion, knowing what *not* to do is just as valuable (if not moreso) than knowing what to do from the get-go.  And that's not to say that this project was a failure.  In fact, I'm very proud of what I was able to accomplish over the weekends spent on making this thityng.  That being said, i'm not a software engineer by any stretch of the imagination, and I have a lot that I can do to improve (best practices, PEP 8, etc.).
+The entire goal of this project was to learn by throwing myself off the deep end, and I believe I did just that.  In my opinion, knowing what *not* to do is just as valuable (if not moreso) than knowing what to do from the start.  I'm not a software engineer by any stretch of the imagination, and I have a lot that I can do to improve (best practices, PEP 8, etc.).  That's not to say that this project was a failure; in fact, I'm very proud of what I was able to accomplish over the long weekend nights spent on making this thing.
 
-Anyway, if you've stuck around this long, congratulations.  I hope you find this project as cool as I do :)
-
-
-
-
-
+Anyway, if you're still reading, congratulations.  I hope you find this project as cool as I have :)
