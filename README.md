@@ -25,11 +25,11 @@ This is a repository for a program that I developed as a summer project for 2020
 ---
 
 ### Download and Install
-To view the source code, just open the file in Github.  If you'd like to download the repository, visit the main repository page and click the green "Code" button above the list of files.  This gives the option to download the master branch as a ZIP.  Once that gets downloaded and unpacked,you now have access to the source code, as well as an executable of the latest version.
+To view the source code, just open the file in Github.  If you'd like to download the repository, visit the main repository page and click the green "Code" button above the list of files.  This gives the option to download the master branch as a ZIP.  Once that gets downloaded and unpacked, you now have access to the source code, as well as an executable of the latest version.
 
-To launch the executable, navigate to where the directory was unpacked, and go to the "dist" folder.  From there, click on finite-element and scroll to or search for the file names "stretchy.exe".  This is the executable that allows the program to run without access to python and the required packages.  Double-click to launch (this may take a while) and have fun!
+To launch the executable, navigate to where the directory was unpacked, and go to the "dist" folder.  From there, click on finite-element and scroll to or search for the file names "stretchy.exe".  This is the executable that allows the program to run without access to python or the required packages.  Double-click to launch (this may take a while) and have fun!
 
-NOTE:  If you're running either a macOS a Linux distro, chances are the .exe won't work.  In that case, you have to run from the source code.  Make sure that all the .py files are in the same directory, and run main.py to start.
+NOTE:  If you're running either a macOS or a Linux distro, chances are the .exe won't work.  In that case, you have to run from the source code.  Make sure that all the .py files are in the same directory, and run main.py to start.
 
 If you choose to run through the source code, the following packages are required:
 
