@@ -9,7 +9,7 @@ Uploaded on 8/24/2020
 
 ### Table of Contents
 1. [Introduction](#Introduction)
-2. [How to Download](#how-to-download)
+2. [Download and Install](#download-and-install)
 3. [User's Guide](#users-guide)
 4. [Why?](#why)
 5. [What's Next?](#whats-next)
@@ -18,11 +18,11 @@ Uploaded on 8/24/2020
 ---
 
 ### Introduction
-
+Welcome!  
 
 ---
 
-### How to Download
+### Download and Install
 
 
 ---
@@ -55,7 +55,9 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 ### Final Thoughts
 Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more performance than me.  If they were smart, they'd probably use something different in the first place.  Pygame, for instance, would have been a better choice.  Even skipping over Python entirely and going straight to something like Unity would have helped.  That way, I could even do something in 3-D.  Oh well, live and learn.  At least now I'm *really* familiar with the Matplotlib documentation.
 
-I guess that was the whole point of this project, though.  
+The entire goal of this project was to learn by throwing myself off the deep end, and I believe I did just that.  In my opinion, knowing what *not* to do is just as valuable (if not moreso) than knowing what to do from the get-go.  And that's not to say that this project was a failure.  In fact, I'm very proud of what I was able to accomplish over the weekends spent on making this thityng.  That being said, i'm not a software engineer by any stretch of the imagination, and I have a lot that I can do to improve (best practices, PEP 8, etc.).
+
+Anyway, if you've stuck around this long, congratulations.  I hope you find this project as cool as I do :)
 
 
 
