@@ -53,12 +53,9 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 ---
 
 ### Final Thoughts
-##### Right tool for the right job
 Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more performance than me.  If they were smart, they'd probably use something different in the first place.  Pygame, for instance, would have been a better choice.  Even skipping over Python entirely and going straight to something like Unity would have helped.  That way, I could even do something in 3-D.  Oh well, live and learn.  At least now I'm *really* familiar with the Matplotlib documentation.
 
-
-
-
+I guess that was the whole point of this project, though.  
 
 
 
