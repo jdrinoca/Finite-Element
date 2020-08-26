@@ -44,7 +44,7 @@ If you choose to run through the source code, the following packages are require
 #### Background
 This program solves for the displacement and stress of frame elements using equations found in chapters 3 and 5 of "A First Course in the Finite Element Method" by Daryl L. Logan.
 
-The displacement calculations account for plane strain in the elements, and require the element materials [modulus of elasticity](https://en.wikipedia.org/wiki/Elastic_modulus) (E) as well as cross sectional area (A) of the element, and it's [area moment of inertia](https://en.wikipedia.org/wiki/List_of_second_moments_of_area) (I).
+The displacement calculations account for plane strain in the elements, and require the element materials [modulus of elasticity](https://en.wikipedia.org/wiki/Elastic_modulus) (E) as well as cross sectional area (A) of the element, and its [area moment of inertia](https://en.wikipedia.org/wiki/List_of_second_moments_of_area) (I).
 
 Stress calculations *do not* account for plane stress, and simply rely on [Hooke's Law](https://en.wikipedia.org/wiki/Hooke's_law).
 
@@ -58,20 +58,19 @@ Structures are started with nodes, which can be considered the joints or connect
 
 With the node field in place, everything else can be added to the structure.  To create frame elements, select 2 nodes (ONLY 2, no more, no less) and enter the desired member properties.
 
-  A - Area cross-section of the member
-  E - Member material modulus of elasticity
-  I - Area moment of inertia of the member
+  * A - Area cross-section of the member
+  * E - Member material modulus of elasticity
+  * I - Area moment of inertia of the member
   
- 
+Click "Create Element" to create the element.  To create another element, select the desired 2 nodes and enter the element properties.  Click "Cancel" to exit the element creation interface.
 
-Constraint
+Constraints are part of the initial conditions required to create a solveable structure.  They either fix a node, or reduce its degrees of freedom.  To constrain a node, click the button "Add Constraint" and select the nodes you'd like to constrain.  To fully fix a node (prevent it from moving in the X and Y direction, and stop rotation), check all 3 boxes in the menu.  The check boxes are how the degrees of freedom are controlled.  Click on "create Constraint" and either repead with different nodes, or click "Cancel" to exit the constraint creation interface.
 
-Load
-  point
-  distributed
-  moment
-  
-Solver requirements
+The other parts of the initial conditions are the loads that the structure experiences.  If there's no loading, there's nothing to solve.  Inthis program, loadsa re divided into 3 categories.
+
+  * **Point Loads:** Forces that act on nodes.  To create a point load, select a node, specify the desired magnitude and direction of the load, and click "Create Point Load". (ex. 40 kN, 90 deg will create a 40 kN force pulling directly up on the node)
+  * **Moment Loads:** Torques that act on nodes.  To create a moment, select a node, specify a magnitude and direction (clockwise/counter-clockwise), and click "Create Moment".
+  * **Distributed Loads:** USE AT YOUR OWN RISK.  The distributed load function is kind of buggy, so avoid if possible.  I'm currently trying to find a better way to do it, but I didn't want to bother to re-do the TkInter interface.  It will work for some applications, so feel free to try it.  If you notice somehting off about your solution, retry but approximate the distributed load as point loads and moments.  That's what the program was suppossed to do, anyways.
 
 #### Solving
 With a completed structure, you're free to solve.  Click the "Solve" button in the top left, and you'll see a few things change.  First, the original structure is translucent, and a new deformed structure is visible.  Nodes are now colormapped to their absolute displacement, and elements are colormapped to their stress values.  The colormap is visible to the right, and provides some context values for the colormapping.  In both cases, red indicates the maximum value pink the minimum.
@@ -108,7 +107,7 @@ This program runs okay(ish).  The more nodes/elements/forces etc. the worse it r
 ---
 
 ### Final Thoughts
-Dear GOD why did I use Matplotlib as the animation platform?!?  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more performance than me.  If they were smart, they'd probably use something different in the first place.  Pygame, for instance, would have been a better choice.  Even skipping over Python entirely and going straight to something like Unity would have helped.  That way, I could even do something in 3-D.  Oh well, live and learn.  At least now I'm *really* familiar with the Matplotlib documentation.
+Dear GOD why did I use Matplotlib as the animation platform?!  Don't get me wrong, the Matplotlib animation function is great, and I'm sure someone who's a better programmer than I would be able to eek out more performance than me.  If they were smart, they'd probably use something different in the first place.  Pygame, for instance, would have been a better choice.  Even skipping over Python entirely and going straight to something like Unity would have helped.  That way, I could even do something in 3-D.  Oh well, live and learn.  At least now I'm *really* familiar with the Matplotlib documentation.
 
 The entire goal of this project was to learn by throwing myself off the deep end, and I believe I did just that.  In my opinion, knowing what *not* to do is just as valuable (if not moreso) than knowing what to do from the start.  I'm not a software engineer by any stretch of the imagination, and I have a lot that I can do to improve (best practices, PEP 8, etc.).  That's not to say that this project was a failure; in fact, I'm very proud of what I was able to accomplish over the long weekend nights spent on making this thing.
 
