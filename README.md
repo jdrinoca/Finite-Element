@@ -111,4 +111,4 @@ WHY did I use Matplotlib as the animation platform?!  Don't get me wrong, the Ma
 
 The entire goal of this project was to learn by throwing myself off the deep end, and I believe I did just that.  In my opinion, knowing what *not* to do is just as valuable (if not moreso) than knowing what to do from the very beginning.  I'm not a software engineer by any stretch of the imagination, and I have a lot that I can do to improve (best practices, PEP 8, etc.).  That's not to say that this project was a failure; in fact, I'm very proud of what I was able to accomplish over the long weekend nights spent making this thing.
 
-Anyway, if you're still reading, congratulations.  I hope you find this project as cool as I have :)
+Anyway, if you're still reading, I hope you find this project as cool as I have :)
