@@ -51,8 +51,27 @@ Stress calculations *do not* account for plane stress, and simply rely on [Hooke
 #### Navigation
 All of the navigation is done through the mouse.  Scrolling the mouse wheel will zoom in and out, and holding and dragging middle-mouse will pan the display to where you want.
 
+To select an object, left click on it in the plotter window.  This will highlight it to indicate that it is selected.  Left click the object again to de-select.
+
 #### Creating a Structure
-text
+Structures are started with nodes, which can be considered the joints or connections of a frame.  To create a node field, click the "Add Node" button and specify the cartesian coordinates for the node you'd like to place.  Click "Create Node" and repeat, or "Cancel" to exit the node creation interface.  Nodes will serve as the backbone of the structure; They rigidly connect frame elements, and accept initial conditions.
+
+With the node field in place, everything else can be added to the structure.  To create frame elements, select 2 nodes (ONLY 2, no more, no less) and enter the desired member properties.
+
+  A - Area cross-section of the member
+  E - Member material modulus of elasticity
+  I - Area moment of inertia of the member
+  
+ 
+
+Constraint
+
+Load
+  point
+  distributed
+  moment
+  
+Solver requirements
 
 #### Solving
 With a completed structure, you're free to solve.  Click the "Solve" button in the top left, and you'll see a few things change.  First, the original structure is translucent, and a new deformed structure is visible.  Nodes are now colormapped to their absolute displacement, and elements are colormapped to their stress values.  The colormap is visible to the right, and provides some context values for the colormapping.  In both cases, red indicates the maximum value pink the minimum.
@@ -62,7 +81,9 @@ In a lot of cases, the displacement is imperceptible relative to the size of the
 To exit solved mode and return to the structure editor, simply click the "Reset Solution" button in the bottom right.
 
 #### Saving and Importing
-text
+Structures are saved as .html documents, which store lists of objects and their properties.  To save, simply click the "Save Structure" button in the bottom left, and navigate to the desired directory.  Similary, a structure can be imported by clicking on the "Import Structure" button.  From there, the file can be opened and imported into the program.
+
+I have included a few different sample structures, located in the folder "Sample Structures".  You can import those to play around with some pre-made structures and to get used to the interface.
 
 ---
 
