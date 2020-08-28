@@ -1,5 +1,8 @@
 
-# controls the element UI
+# controls the element creation UI
+
+# Joseph Rudick
+# Edited: 8/28/2020
 
 import globals as g
 from element import element
@@ -24,6 +27,7 @@ class btn(object):
             g.bImport.set_active(False)
             g.bReset.set_active(False)
 
+            # Send element parameters to create an element object
             def createElement(indices, A, E, I):
                 g.elements.append(element(g.nodes[indices[0]], g.nodes[indices[1]], A, E, I, 'k'))
 
@@ -31,20 +35,23 @@ class btn(object):
 
             def getNodes():
                 indices = []
-                for i in g.nodes:
+                for i in g.nodes:   # check for selected nodes
                     if i.color == 'c':
                         indices.append(g.nodes.index(i))
+                # verify that only 2 nodes are selected
                 if len(indices) < 2:
                     tk.messagebox.showerror(title="Node Error", message="Select 2 Nodes to Continue")
                 elif len(indices) > 2:
                     tk.messagebox.showerror(title="Node Error", message="Select ONLY 2 Nodes to Continue")
                 else:
                     for i in g.elements:
+                        # Check that no element exists between the 2 selected nodes
                         if (g.nodes[indices[0]]==i.node1 and g.nodes[indices[1]]==i.node2) or\
                             (g.nodes[indices[1]]==i.node1 and g.nodes[indices[0]]==i.node2):
                             tk.messagebox.showerror(title="Element Error", message="Element Already Exists")
                             return
                     try:
+                        # retrieve values from interface
                         A = float(aEntry.get())
                         E = float(eEntry.get())
                         I = float(iEntry.get())
@@ -53,6 +60,7 @@ class btn(object):
                         pass
 
             def deselectAll():
+                # Clear selected objects
                 for i in g.nodes:
                     i.changeColor(g.defaultNodeColor)
                 for i in g.elements:
@@ -83,9 +91,10 @@ class btn(object):
             deselectAll()
             root = tk.Tk()
 
-            if g.solved:
+            if g.solved:    # exit if structure is in solved mode
                 _quit()
             else:
+                # Initialize element creation interface
                 root.geometry('+200+100')
                 root.title("Enter Element Properties")
                 mainframe = ttk.Frame(root, padding="20 20 20 20")
@@ -93,7 +102,6 @@ class btn(object):
                 root.columnconfigure(0, weight=1)
                 root.rowconfigure(0, weight=1)
 
-                #ttk.Label(mainframe, text='Element Properties:').grid(column=1, row=1)
                 ttk.Label(mainframe, text='A: ').grid(column=1, row=1, sticky = "e")
                 aEntry = ttk.Entry(mainframe, width=15)
                 aEntry.grid(column=2, row=1)
