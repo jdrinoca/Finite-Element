@@ -1,6 +1,9 @@
 
 # force instance
-#
+
+# Joseph Rudick
+# Edited: 8/28/2020
+
 # node - connected node (node instance)
 # magnitude - magnitude of the force (float)
 # angle - force vector direction from positive X (float)
