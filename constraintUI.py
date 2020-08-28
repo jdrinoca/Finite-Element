@@ -11,9 +11,9 @@ from tkinter import ttk
 
 class btn(object):
     def interface(self):
-        # deactivate main buttonsS
         button = str(self.__getattribute__("button"))
         if button == "MouseButton.LEFT":
+            # deactivate main buttons
             g.bSolve.set_active(False)
             g.bNode.set_active(False)
             g.bElement.set_active(False)
@@ -23,6 +23,8 @@ class btn(object):
             g.bImport.set_active(False)
             g.bReset.set_active(False)
 
+            # Send constraint parameters to create coinstraint instance
+            # create graphics for each constraint
             def createConstraint(indices, u, v, r):
                 for i in indices:
                     g.constraints.append(constraint(g.nodes[i], u, v, r, 'y'))
@@ -36,23 +38,24 @@ class btn(object):
 
             def getNodes():
                 indices = []
-                for i in g.nodes:
+                for i in g.nodes:   # Check for selected nodes
                     if i.color == 'c':
                         indices.append(g.nodes.index(i))
-                if len(indices) == 0:
+                if len(indices) == 0:   # If no node are selected
                     tk.messagebox.showerror(title="Node Error", message="Select at Leats 1 Node to Continue")
                 else:
                     try:
                         u = uCon.get()
                         v = vCon.get()
                         r = rCon.get()
-                        if not u and not v and not r:
+                        if not u and not v and not r:   # If no constraint directions are specified
                             pass
                         else:
                             createConstraint(indices, u, v, r)
                     except ValueError:
                         pass
 
+            # de-select all objects
             def deselectAll():
                 for i in g.nodes:
                     i.changeColor(g.defaultNodeColor)
@@ -80,6 +83,8 @@ class btn(object):
                 deselectAll()
                 root.destroy()
             
+            # Flip boolean checkbox values
+            
             def uFlip():
                 uCon.set(not uCon.get())
             
@@ -93,9 +98,10 @@ class btn(object):
             deselectAll()
             root = tk.Tk()
 
-            if g.solved:
+            if g.solved:    # Quit if structure is in solved mode
                 _quit()
             else:
+                # Initialize constriant interface
                 root.geometry('+200+100')
                 root.title("Nodal Constraint Parameters")
                 mainframe = ttk.Frame(root, padding="20 20 20 20")
@@ -103,7 +109,6 @@ class btn(object):
                 root.columnconfigure(0, weight=1)
                 root.rowconfigure(0, weight=1)
 
-                #ttk.Label(mainframe, text='Element Properties:').grid(column=1, row=1)
                 ttk.Label(mainframe, text='Constrain Along:').grid(column=1, row=1, sticky = "w")
 
                 uCon = tk.BooleanVar()
