@@ -1,6 +1,9 @@
 
 # controls the constraint UI
 
+# Joseph Rudick
+# Edited: 8/28/2020
+
 import globals as g
 from constraint import constraint
 from node import node
