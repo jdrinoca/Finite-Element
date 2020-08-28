@@ -1,6 +1,9 @@
 
 # element instance
-#
+
+# Joseph Rudick
+# Edited: 8/28/2020
+
 # node1 - 1st connected node (node instance)
 # node2 - 2nd connected node (node instance)
 # A - element cross-section area (float)
