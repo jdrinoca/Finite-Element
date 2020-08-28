@@ -1,6 +1,9 @@
 
 # constraint instance
-#
+
+# Joseph Rudick
+# Edited: 8/28/2020
+
 # node - constrained node (node instance)
 # x - constrained against X direction (boolean)
 # y - constrained against Y direction (boolean)
