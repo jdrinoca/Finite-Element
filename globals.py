@@ -1,6 +1,9 @@
 
 # global variables
 
+# Joseph Rudick
+# Edited: 8/28/2020
+
 nodes = []
 nodeX, nodeY, nodeColor = [], [], []
 nodeScat = None
