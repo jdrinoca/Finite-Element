@@ -3,6 +3,9 @@
 # If solved, saves only the initial structure
 # results are saved automatically
 
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 from node import node
 from element import element
@@ -17,17 +20,22 @@ import pandas as pd
 class btn(object):
     def interface(self):
         button = str(self.__getattribute__("button"))
+        # Check for left click
         if button == "MouseButton.LEFT":
 
+            # Initialize file dialog interface
             root = tk.Tk()
             root.withdraw()
             
             filepath = filedialog.asksaveasfilename()
+            # Do nothing if no file name is specified
             if filepath == "":
                 return
+            # Add '.html' extension if not already there
             if ".html" not in filepath:
                 filepath += ".html"
 
+            # Create the specified .html file and save the structure as a series of .html tables
             with open(filepath, "w") as html:
 
                 df = []
