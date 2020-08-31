@@ -1,6 +1,9 @@
 
 # controls the load UI
 
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 from force import force
 from moment import moment
@@ -13,6 +16,7 @@ from tkinter import ttk
 class btn(object):
     def interface(self):
         button = str(self.__getattribute__("button"))
+        # Check for left click
         if button == "MouseButton.LEFT":
             # deactivate main buttons
             g.bSolve.set_active(False)
@@ -24,15 +28,19 @@ class btn(object):
             g.bImport.set_active(False)
             g.bReset.set_active(False)
 
+            # read values from the interface and create a point force
             def createPointLoad():
                 indices = []
                 for i in g.nodes:
+                    # Check for selected nodes
                     if i.color == 'c':
                         indices.append(g.nodes.index(i))
+                # If no nodes are selected, try again
                 if len(indices) == 0:
                     tk.messagebox.showerror(title="Node Error", message="Select at Least 1 Node to Continue")
                 else:
                     try:
+                        # Read interface values and create a force
                         magnitude = float(magEntry.get())
                         angle = float(angleEntry.get()) * np.pi/180
 
@@ -41,16 +49,20 @@ class btn(object):
                     except ValueError:
                         pass
 
+            # read values from interface and create a distributed load on an element
             def createDistLoad():
                 indices = []
                 for i in g.elements:
+                    # Check for selected elements
                     if i.color == 'c':
                         indices.append(g.elements.index(i))
 
+                # If no elements are selected, try again
                 if len(indices) == 0:
                     tk.messagebox.showerror(title="Element Error", message="Select at Least 1 Element to Continue")
                 else:
                     try:
+                        # read interface values and use them to create equivalent nodal forces (moment and force at each node)
                         for i in indices:
 
                             distMag = float(distMagEntry.get()) * g.elements[i].L/2
@@ -71,22 +83,26 @@ class btn(object):
                     except ValueError:
                         pass
 
+            # Read values from interface and create a nodal moment (twisting; torque around the node)
             def createMoment():
                 indices = []
                 for i in g.nodes:
                     if i.color == 'c':
+                        # check for selected nodes
                         indices.append(g.nodes.index(i))
+                # If no nodes are selected, try again
                 if len(indices) == 0:
                     tk.messagebox.showerror(title="Node Error", message="Select at Least 1 Node to Continue")
                 else:
                     try:
+                        # read interface values and use them to create a moment about each selected node
                         magnitude = float(momentMagEntry.get()) * direction.get()
                         for i in indices:
                             g.moments.append(moment(g.nodes[i], magnitude, 'darkred'))
                     except ValueError:
                         pass
 
-            
+            # Clear selection
             def deselectAll():
                 for i in g.nodes:
                     i.changeColor(g.defaultNodeColor)
@@ -115,7 +131,7 @@ class btn(object):
                 deselectAll()
                 root.destroy()
 
-
+            # Initialize load creation interface
             deselectAll()
             root = tk.Tk()
 
