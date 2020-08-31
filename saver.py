@@ -1,7 +1,6 @@
 
 # saves the current structure
 # If solved, saves only the initial structure
-# results are saved automatically
 
 # Joseph Rudick
 # Edited: 8/31/2020
