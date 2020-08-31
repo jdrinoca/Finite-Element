@@ -16,8 +16,10 @@ import pandas as pd
 class btn(object):
     def interface(self):
         button = str(self.__getattribute__("button"))
+        # check for left click
         if button == "MouseButton.LEFT":
 
+            # Initialize file dialogue interface
             root = tk.Tk()
             root.withdraw()
             
@@ -26,8 +28,10 @@ class btn(object):
                 return
             try:
 
+                # convert file contents to a dataframe
                 dfs = pd.read_html(filepath)
 
+                # Clear existing structure
                 g.nodes = []
                 g.nodeX, g.nodeY, g.nodeColor = [], [], []
 
@@ -49,8 +53,9 @@ class btn(object):
                 for i in range(0, loops):
                     g.momentsPlot.pop(0).remove()
 
+                    
+                # Loop through the dataframe and create the structure
                 table = 0
-
                 for i in dfs:
                     if table == 0:
                         for j in i.values:
@@ -74,9 +79,10 @@ class btn(object):
                         for j in i.values:
                             g.moments.append(moment(g.nodes[int(j[1])], j[2], 'darkred'))
                     table += 1
-            except ValueError:
+            except ValueError:  # If the file chosen is not .html or has invalid contents
                 tk.messagebox.showerror(title="File Error", message="Invalid Structure File")
 
+            # Clear the dataframe
             dfs = 0
 
 
