@@ -1,6 +1,9 @@
 
 # controls the node UI
 
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 from node import node
 
@@ -11,13 +14,17 @@ from tkinter import ttk
 class btn(object):
     def interface(self):
         button = str(self.__getattribute__("button"))
+        # Check for left-click
         if button == "MouseButton.LEFT":
+            
+            # Read specified X-Y coordinates and create a node if it's unique
             def createNode():
                 try:
-
+                    # get X, Y
                     xVal = float(uEntry.get())
                     yVal = float(vEntry.get())
 
+                    # Check if a node already occupies the specified coordinates
                     nodeExists = False
                     for i in g.nodes:
                         if i.u == xVal and i.v == yVal:
@@ -26,6 +33,7 @@ class btn(object):
                         else:
                             nodeExists = False
 
+                    # Create a node at X, Y
                     if not nodeExists:
                         g.nodes.append(node(xVal, yVal, 'b'))
                         g.nodeX.append(g.nodes[len(g.nodes)-1].u)
