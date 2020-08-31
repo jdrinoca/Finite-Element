@@ -2,6 +2,9 @@
 # imports a previously-saved structure
 # clears the plotter first, so save your work!
 
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 from node import node
 from element import element
