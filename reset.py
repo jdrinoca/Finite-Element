@@ -1,4 +1,10 @@
 
+# If solved, returns the structure to an unsolved state.
+# If unsolved, clears the plotter and deletes the structure
+
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 import events
 from node import node
@@ -10,12 +16,15 @@ from moment import moment
 class btn(object):
     def interface(self):
         button = str(self.__getattribute__("button"))
+        # Check for left click
         if button == "MouseButton.LEFT":
 
+            # Return to editing mode if the structure is in a sovled state
             if(g.solved):
                 g.bReset.label.set_text("Clear Structure")
                 g.solved = False
 
+                # Delete solution
                 g.solvedNodes = []
                 g.solvedX, g.solvedY, g.solvedColor = [], [], []
 
@@ -25,6 +34,7 @@ class btn(object):
                 for i in range(0, loops):
                     g.solvedPlot.pop(0).remove()
 
+                # Activate main buttons, clear the gain slider
                 g.bSolve.set_active(True)
                 g.bNode.set_active(True)
                 g.bElement.set_active(True)
@@ -49,6 +59,7 @@ class btn(object):
                 for i in g.momentsPlot:
                     i.set_alpha(1)
                 
+            # Clear plotter and delete structure if not in solved mode
             else:
                 g.bReset.label.set_text("Clear Structure")
 
