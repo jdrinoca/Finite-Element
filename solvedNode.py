@@ -1,6 +1,9 @@
 
 # solved node instance
-#
+
+# Joseph Rudick
+# Edited: 8/31/2020
+
 # u - x-position (float)
 # v - y-position (float)
 # node - original node (node instance)
