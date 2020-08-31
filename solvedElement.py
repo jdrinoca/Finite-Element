@@ -1,6 +1,9 @@
 
 # solved element instance
-#
+
+# Joseph Rudick
+# Edited: 8/31/2020
+
 # node1 - 1st connected node (solved node instance)
 # node2 - 2nd connected node (solved node instance)
 # stress - calculated elemental stress (float)
