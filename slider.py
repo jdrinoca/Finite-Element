@@ -1,4 +1,9 @@
 
+# Slider Instance.  The silder controls the deflection magnification (gain)
+
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 import numpy as np
 
