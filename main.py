@@ -1,4 +1,9 @@
 
+# Main graphics file, contains animation loop
+
+# Joseph Rudick
+# Edited: 8/31/2020
+
 import globals as g
 import nodeUI, elementUI, constraintUI, loadUI
 import solver, saver, importer, reset, slider
