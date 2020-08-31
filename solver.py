@@ -1,7 +1,9 @@
 
 # solves for nodal displacement and elemental stress
-# outputs results to a .txt file
 # puts plotter in post-processing mode
+
+# Joseph Rudick
+# Edited: 8/31/2020
 
 import globals as g
 from node import node
@@ -63,6 +65,7 @@ class btn(object):
                 # compute global stiffness matrix
                 K = np.float64(np.matrix([[0 for i in range(len(g.nodes)*3)] for j in range(len(g.nodes)*3)]))
 
+                # Add local stiffness matrix of each element to the global stiffness matrix
                 for elem in g.elements:
                     L = elem.L
                     coef = elem.E/L
@@ -153,6 +156,7 @@ class btn(object):
                 d = np.linalg.solve(K,F)
                 g.displacement = d
 
+                # Solve for elemental stress
                 stress = []
                 for i in g.elements:
                     elementAngle = [-1*np.cos(i.angle), -1*np.sin(i.angle), np.cos(i.angle), np.sin(i.angle)]
@@ -160,14 +164,17 @@ class btn(object):
                                                 np.float(d[g.nodes.index(i.node2)*3]), np.float(d[g.nodes.index(i.node2)*3])])
                     stress.append(i.E/i.L*np.dot(elementAngle, elementDisp))
 
+                # Convert displacement vector to absolute displacements for each node
                 disp = []
                 for i in range(0, np.int(len(d)/3)):
                     disp.append(np.float(np.sqrt(d[i*3]**2+d[i*3+1]**2)))
 
+                # Create and normalize a colormap for displacement and stress
                 normalizedDisp = mpl.colors.Normalize(vmin=np.min(disp), vmax=np.max(disp))
                 normalizedStress = mpl.colors.Normalize(vmin=np.min(stress), vmax=np.max(stress))
                 cmap = mpl.pyplot.get_cmap(g.colormap)
 
+                # Create the colormap legends
                 g.axBarDisp = plt.axes([0.90, 0.4, 0.04, 0.5])
                 g.sBarDisp = mpl.colorbar.ColorbarBase(g.axBarDisp, orientation='vertical', cmap=cmap, norm=normalizedDisp)
                 g.axBarDisp.yaxis.set_ticks_position('right')
@@ -180,6 +187,9 @@ class btn(object):
                 g.axBarStress.yaxis.set_label_position('left')
 
 
+                # Create the solved structure with scaled displacements
+                # Node colors correspond to total nodal displacements
+                # Element colors correspond to elemental stress
                 nodeInd = 0
                 for i in g.nodes:
                     g.solvedNodes.append(solvedNode(i.u+np.float(d[nodeInd*3]), i.v+np.float(d[nodeInd*3+1]), \
@@ -201,6 +211,7 @@ class btn(object):
 
                 g.solved = True
 
+                # De-activate main buttons
                 g.bSolve.set_active(False)
                 g.bNode.set_active(False)
                 g.bElement.set_active(False)
@@ -224,7 +235,7 @@ class btn(object):
                     i.set_alpha(0.2)
 
                                 
+            # If an error is thrown, abort solution process and send an error box
             except Exception as e:
-                print(e)
-                tk.messagebox.showerror(title="Solver Error", message="Something went wrong :(\nCheck your constraints")
+                tk.messagebox.showerror(title="Solver Error", message="Something went wrong :(\nCheck your initial conditions")
 
